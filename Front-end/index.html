@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookshelf Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&family=Readex+Pro:wght@700&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1 class="header-logo">Bookshelf</h1>
+        </div> 
+        <div class="header-right">
+                <form class="search-box" id="searchBook" >
+                    <label for="searchBookTitle"></label>
+                    <input id="searchBookTitle" type="search" placeholder="Search..">
+                    <button type="submit" class="searchButton" id="searchButton">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </form>
+            </div>
+        </div>
+
+    </header>
+    
+    <div class="top-wrapper">
+        <div class="container">
+            <h1>Selamat Datang di Bookshelf</h1>
+            <p>Bookshelf merupakan platform untuk menata serta mengelola buku yang akan dibaca</p>
+        </div>
+    </div>
+
+    <div class="contents-wrapper" id="inputan">
+        <ul>
+            <li>
+                <h2 class="contents">Tambah Buku Baru</h2>
+                <hr>
+                    <form class="form" action="#" id="form">
+                        <div class="input-group">
+                            <input type="text" id="title" placeholder="Judul Buku" class="input-form" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="author" placeholder="Author" class="input-form" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="number" placeholder="year" id="year" class="input-form"
+                            onKeyPress="if(this.value.length==4) return false;" required>
+                        </div>
+                        <input type="submit" value="Submit" name="Submit" id="submit" class="button-submit">
+                    </form>
+                </li>
+            </ul>   
+
+        <div class="book-shelf">
+            <h2 >Belum dibaca</h2>
+            <hr>
+                <div id="unread" class="unread">
+                </div>
+        </div>
+
+        <div class="book-shelf">
+            <h2>Sudah dibaca</h2>
+            <hr>
+            <div id="read" class="read">
+            </div>
+        </div>
+    </div>    
+</body>
+
+<script src="script/storage.js"></script>
+<script src="script/main.js"></script>
+<script src="dist/sweetalert2.all.min.js"></script>
+</body>
+</html>
